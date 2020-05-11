@@ -1,0 +1,84 @@
+<html>
+  <head>
+    <title>DEEP DIVE</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+     <script>
+    $( function() {
+      $( "#infoTab" ).draggable();
+    } );
+
+      var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+    if (!isChrome){
+       $('#iframeAudio').remove()
+    }
+    else {
+       $('#playAudio').remove() // just to make sure that it will not have 2x audio in the background
+    }
+
+    </script>
+  </head>
+  <body >
+
+<a href="index.html"><img src="arrow.gif" alt="back arrow" id="arrow"></a>
+<div id="title">
+  <p > SCENE SELECTION</p>
+  <audio autoplay controls  id="audio">
+      <source src="hub_audio.mp3">
+  </audio>
+</div>
+
+<div class="scene">
+      <img src="progress.png" class="menuimg">
+      <p> INTRODUCTION: ABOUT HUMANS</p>
+</div>
+
+<div class="scene">
+      <a href="memorycore.html" ><img src="menu_memory.png" class="menuimg"></a>
+      <p> MEMORY CORE</p>
+</div>
+<div class="scene">
+      <a href="KnowledgeCenter_draft.html"><img src="menu_knowledge.png" class="menuimg"></a>
+      <p> KNOWLEDGE CENTER</p>
+</div>
+<div class="scene">
+      <img src="progress.png" class="menuimg">
+      <p> BODY</p>
+</div>
+<div class="scene">
+      <img src="progress.png" class="menuimg">
+      <p> BRAIN</p>
+</div>
+<div class="scene">
+      <img src="progress.png" class="menuimg">
+      <p> FEELINGS CORE</p>
+</div>
+
+
+<div class="plus"  onclick="openDiv('infoTab')">
+  <p>more info</p>
+  +
+</div>
+
+<div id="infoTab" style="opacity:0; z-index:-10;">
+  <div class="infoNav">
+      <div class="x" onclick="closeDiv('infoTab')">
+          x
+      </div>
+  </div>
+
+  <p> Memory Core Diagram</p>
+
+
+</div>
+
+
+
+
+
+
+
+  </body>
+</html>

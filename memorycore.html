@@ -1,0 +1,147 @@
+﻿<!--Save as html file-->
+<html>
+<head>
+<link rel="icon"
+      type="image/png"
+      href="favicon.png">
+<title>DEEP DIVE</title>
+<script src="flick.js"></script>
+<script src="script.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+ <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+ <script>
+$( function() {
+  $( "#infoTab" ).draggable();
+  $( "#cellInfo" ).draggable();
+  $( "#parserInfo" ).draggable();
+  $( "#collectorInfo" ).draggable();
+} );
+</script>
+<link rel="stylesheet" type="text/css" href="style.css">
+
+
+
+</head>
+<body onload="init()">
+  <div id="overlay">
+
+<a href="hub.html"><img src="arrow.gif" alt="back arrow"></a>
+
+
+
+<p id="title">CHAPTER 1: MEMORY STORAGE</p>
+
+  </div>
+  <div id="flick">
+    <div id="header">
+    </div>
+    <p>
+    <div id="content">
+    <canvas id="mainCanvas"></canvas>
+    </div>
+    <p>
+    <div id="footer">
+    <a href="" id="hackLink"></a> <a  id="homeLink" href=""></a>
+   </div>
+</div>
+
+</body>
+
+<div class="plus"  onclick="openDiv('infoTab')">
+  <p>more info</p>
+  +
+</div>
+
+<div id="infoTab" style="opacity:0; z-index:-10;">
+  <div class="infoNav">
+      <div class="x" onclick="closeDiv('infoTab')">
+          x
+      </div>
+  </div>
+
+  <p> Memory Core Diagram</p>
+  <div id="tableContainer">
+    <table style="width:100%">
+      <tr>
+        <td onclick="openDiv('cellInfo')" class="dreamCell"></td>
+        <td style="border-bottom:none;">
+          <div class="tableElem" onclick="openDiv('parserInfo')"> Parser</div>
+        </td>
+        <td onclick="openDiv('cellInfo')" class="dreamCell"></td>
+      </tr>
+      <tr>
+        <td onclick="openDiv('cellInfo')" class="dreamCell"></td>
+        <td style="border:none;"></td>
+        <td onclick="openDiv('cellInfo')" class="dreamCell"></td>
+      <tr>
+        <td onclick="openDiv('cellInfo')" class="dreamCell"></td>
+        <td style="border:none;"></td>
+        <td onclick="openDiv('cellInfo')" class="dreamCell"></td>
+      </tr>
+      <tr>
+        <td onclick="openDiv('cellInfo')" class="dreamCell"></td>
+        <td style="border:none;"></td>
+        <td onclick="openDiv('cellInfo')" class="dreamCell"></td>
+      </tr>
+      <tr>
+        <td onclick="openDiv('cellInfo')" class="dreamCell"></td>
+        <td style="border:none;"></td>
+        <td onclick="openDiv('cellInfo')" class="dreamCell"></td>
+      <tr>
+        <td onclick="openDiv('cellInfo')" class="dreamCell"></td>
+        <td style="border-top:none;">
+            <div class="tableElem" onclick="openDiv('collectorInfo')"> Collector</div>
+        </td>
+        <td onclick="openDiv('cellInfo')" class="dreamCell"></td>
+      </tr>
+    </table>
+
+</div>
+
+
+
+</div>
+<div id="cellInfo" class="infoTab" style="opacity:0; z-index:-10;">
+  <div class="infoNav">
+      <div class="x" onclick="closeDiv('cellInfo')">
+          x
+      </div>
+  </div>
+
+  <h1>Memory Unit</h1>
+  <table>
+    <tr>
+        <td>
+              <img src="dreamcell.png" />
+        </td>
+        <td>
+          <p>
+          Each contain individual copies of a single Event which grows and decays over time. They can be connected to each other. Each unit is an active ecosystem. They produce minimal amounts of emotional and information packages which are collected in the dispose bin.
+          </p>
+        </td>
+    </tr>
+  </table>
+
+
+</div>
+
+<div id="parserInfo"style="opacity:0; z-index:-10;" class="infoTab">
+  <div class="infoNav">
+      <div class="x" onclick="closeDiv('parserInfo')">
+          x
+      </div>
+  </div>
+  <p>The parcer receives information packages. Either creates new memory or makes the necessary changes to relevant memory units. </p>
+</div>
+
+<div id="collectorInfo" class="infoTab" style="opacity:0; z-index:-10;">
+  <div class="infoNav">
+      <div class="x" onclick="closeDiv('collectorInfo')">
+          x
+      </div>
+  </div>
+  <p>The collector egularly collects packages created by the memory units and sends them off for processing to the feelings core, knowledge center, or cold storage.</p>
+</div>
+
+
+</html>
