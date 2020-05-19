@@ -1,4 +1,10 @@
 
+body, html {
+  height: 100%;
+  width: 100%;
+  color:white;
+}
+
 .center{
   text-align: center;
 }
@@ -33,6 +39,8 @@ img{
 #title{
   text-align: center;
   padding-bottom: 20px;
+  color: black;
+  top:20px;
 }
 
 #title img{
@@ -281,7 +289,9 @@ img{
   text-align: center;
   width: 50%;
   margin-left: 25%;
-  bottom:0px;
+  left:0px;
+  color:black;
+  z-index: 100000000;
 }
 
 #link a:visited{
@@ -317,11 +327,7 @@ img{
 }
 
 
-body, html {
-  height: 100%;
-  width: 100%;
-  color:white;
-}
+
 
 .bg {
   /* The image used */
